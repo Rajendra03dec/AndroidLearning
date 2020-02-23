@@ -1,1 +1,1 @@
-This repo is to the practical demo of latest android feature coming in android
+This repo is the practical demo of latest android feature coming in android
