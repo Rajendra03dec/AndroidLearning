@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidUpdates</string>
+    <string name="thread_looper_handler">Thread Looper Handler</string>
+    <string name="mvvm_using_kotlin">MVVM (Using kotlin)</string>
+    <string name="activity_life_cycle">Activity LifeCycle</string>
+    <string name="kotlin_co_routine">Kotlin CoRoutine</string>
 </resources>

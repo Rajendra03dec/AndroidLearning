@@ -22,7 +22,7 @@ class FragmentOne : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(FragmentOne::class.java.simpleName, "onCreateView called")
-        return inflater.inflate(R.layout.fragment_one, container)
+        return inflater.inflate(R.layout.fragment_one, container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

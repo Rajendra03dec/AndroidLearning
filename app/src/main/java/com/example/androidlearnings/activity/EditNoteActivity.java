@@ -47,7 +47,14 @@ public class EditNoteActivity extends AppCompatActivity implements View.OnClickL
         }
 
         binding.btnCancel.setOnClickListener(this);
-        binding.btnUpdate.setOnClickListener(this);
+//        binding.btnUpdate.setOnClickListener(this);
+
+        binding.btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 

@@ -11,7 +11,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/dp20"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -24,23 +24,49 @@
                 android:background="@color/colorPrimary"
                 android:gravity="center_horizontal"
                 android:onClick="onClick"
-                android:padding="10dp"
-                android:text="model arch(Using kotlin)"
+                android:padding="@dimen/dp10"
+                android:text="@string/mvvm_using_kotlin"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="@dimen/sp20" />
 
             <TextView
                 android:id="@+id/tvActivityLC"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
                 android:background="@color/colorPrimary"
                 android:gravity="center_horizontal"
                 android:onClick="onClick"
-                android:padding="10dp"
-                android:text="Activity LifeCycle"
+                android:padding="@dimen/dp10"
+                android:text="@string/activity_life_cycle"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="@dimen/sp20" />
+
+            <TextView
+                android:id="@+id/kotlin_coroutine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:padding="@dimen/dp10"
+                android:text="@string/kotlin_co_routine"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp20" />
+
+            <TextView
+                android:id="@+id/threadLooperHandler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:onClick="onClick"
+                android:padding="@dimen/dp10"
+                android:text="@string/thread_looper_handler"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp20" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

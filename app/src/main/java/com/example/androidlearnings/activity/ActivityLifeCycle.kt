@@ -59,4 +59,5 @@ class ActivityLifeCycle : AppCompatActivity() {
             }
         }
     }
+
 }
