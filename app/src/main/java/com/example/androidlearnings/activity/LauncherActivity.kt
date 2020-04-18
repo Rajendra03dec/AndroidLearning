@@ -26,6 +26,7 @@ class LauncherActivity : AppCompatActivity() {
             R.id.tvMVVM -> startActivity(Intent(this, FetchDataActivity::class.java))
             R.id.tvActivityLC -> startActivity(Intent(this, ActivityLifeCycle::class.java))
             R.id.kotlin_coroutine -> startActivity(Intent(this, ActivityLifeCycle::class.java))
+            R.id.threadLooperHandler -> startActivity(Intent(this, DictionaryActivity::class.java))
         }
     }
 }
