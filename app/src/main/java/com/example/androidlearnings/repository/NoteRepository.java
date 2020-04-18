@@ -5,9 +5,9 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
+import com.example.androidlearnings.room.LearningDatabase;
 import com.example.androidlearnings.room.Note;
 import com.example.androidlearnings.room.NoteDao;
-import com.example.androidlearnings.room.NoteDatabase;
 
 import java.util.List;
 
@@ -16,8 +16,8 @@ public class NoteRepository {
     private LiveData<List<Note>> allNotes;
 
     public NoteRepository(Application application) {
-        NoteDatabase noteDatabase = NoteDatabase.getInstance(application);
-        noteDao = noteDatabase.noteDao();
+        LearningDatabase learningDatabase = LearningDatabase.getInstance(application);
+        noteDao = learningDatabase.noteDao();
         allNotes = noteDao.getAllNotes();
     }
 

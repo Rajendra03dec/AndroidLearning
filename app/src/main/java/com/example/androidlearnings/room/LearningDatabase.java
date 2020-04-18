@@ -9,36 +9,38 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Note.class}, version = 1)
-public abstract class NoteDatabase extends RoomDatabase {
+@Database(entities = {Note.class, Word.class}, version = 1)
+public abstract class LearningDatabase extends RoomDatabase {
 
-    private static NoteDatabase instance;
+    public static final String DATABASE_NAME = "learning_database";
+    private static LearningDatabase dbInstance;
 
     public abstract NoteDao noteDao();
+    public abstract WordDao wordDao();
 
-    public static synchronized NoteDatabase getInstance(Context context) {
-        if (instance == null) {
-            instance = Room.databaseBuilder(context.getApplicationContext(), NoteDatabase.class, "note_database")
+    public static synchronized LearningDatabase getInstance(Context context) {
+        if (dbInstance == null) {
+            dbInstance = Room.databaseBuilder(context.getApplicationContext(), LearningDatabase.class, DATABASE_NAME)
                     .fallbackToDestructiveMigration()
                     .addCallback(roomCallBack)
                     .build();
         }
-        return instance;
+        return dbInstance;
     }
 
     private static RoomDatabase.Callback roomCallBack = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
-            new PopulateDbAsynTask(instance).execute();
+            new PopulateDbAsynTask(dbInstance).execute();
         }
     };
 
     private static class PopulateDbAsynTask extends AsyncTask<Void, Void, Void> {
         private NoteDao noteDao;
 
-        public PopulateDbAsynTask(NoteDatabase noteDatabase) {
-            noteDao = noteDatabase.noteDao();
+        public PopulateDbAsynTask(LearningDatabase learningDatabase) {
+            noteDao = learningDatabase.noteDao();
         }
 
         @Override

@@ -6,4 +6,5 @@ public class Constant
     public static String NOTE_ID = "note_id";
     public static int ADD_NOTE_REQUEST_CODE = 1277;
     public static int EDIT_NOTE_REQUEST_CODE = 4490;
+    public static int ADD_WORD_REQUEST_CODE = 4491;
 }

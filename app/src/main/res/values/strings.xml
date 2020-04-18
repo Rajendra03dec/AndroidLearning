@@ -4,4 +4,6 @@
     <string name="mvvm_using_kotlin">MVVM (Using kotlin)</string>
     <string name="activity_life_cycle">Activity LifeCycle</string>
     <string name="kotlin_co_routine">Kotlin CoRoutine</string>
+    <string name="title_activity_dictonary">DictonaryActivity</string>
+    <string name="update">Update</string>
 </resources>
